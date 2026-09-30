@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Vulnerability Scanner & SIEM Log Analyzer",
+    "description": "Automated network vulnerability assessment tool with log integration, threat scoring, and automated alerting pipeline.",
+    "category": "Defensive Security",
+    "tags": ["Python", "Docker", "ELK Stack", "Cybersecurity", "SIEM", "Nmap"],
+    "github": "https://github.com/example/vulnerability-scanner",
+    "metrics": {
+      "cveCoverage": "14,000+ signatures",
+      "scanLatency": "< 45s per subnet",
+      "falsePositiveReduction": "38%"
+    },
+    "highlights": [
+      "Asynchronous subnet port scanning & service banner fingerprinting",
+      "Integration with Elasticsearch & Kibana dashboards for real-time alerting",
+      "Rule-based CVE severity scoring based on CVSS v3.1 vectors"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Zero Trust Network Access (ZTNA) Gateway Simulation",
+    "description": "Software-defined perimeter gateway enforcing continuous mutual TLS (mTLS) authentication and micro-segmentation policies.",
+    "category": "Network Architecture",
+    "tags": ["Go", "mTLS", "Zero Trust", "WireGuard", "Docker", "Cryptography"],
+    "github": "https://github.com/example/ztna-gateway",
+    "metrics": {
+      "authLatency": "< 12ms",
+      "throughput": "1.2 Gbps",
+      "sessionRevocation": "Instantaneous (< 100ms)"
+    },
+    "highlights": [
+      "Hardware-backed token / FIDO2 authentication integration",
+      "Dynamic firewall micro-segmentation based on device health posture",
+      "Cryptographic mutual TLS handshake verification on every egress request"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Automated Phishing & C2 Triage Pipeline",
+    "description": "Orchestrated incident response pipeline for analyzing suspicious email headers, attachments, and detonating URLs in sandbox environments.",
+    "category": "Threat Intelligence",
+    "tags": ["Python", "VirusTotal API", "Cuckoo Sandbox", "MISP", "FastAPI"],
+    "github": "https://github.com/example/phish-triage-pipeline",
+    "metrics": {
+      "avgTriageTime": "18 seconds (down from 15 min)",
+      "detectionRate": "99.4%",
+      "analystInterventionNeeded": "< 5%"
+    },
+    "highlights": [
+      "Deep email header RFC-822 SPF/DKIM/DMARC alignment validation",
+      "Automated payload extraction and dynamic sandbox detonation",
+      "IOC publishing directly into Threat Intelligence Platforms (MISP / OpenCTI)"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Cloud IAM Privilege Escalation & Posture Auditor",
+    "description": "Cloud security posture management (CSPM) tool analyzing AWS/GCP IAM permission graphs to detect privilege escalation vectors.",
+    "category": "Cloud Security",
+    "tags": ["Python", "AWS SDK", "Graph Database", "Neo4j", "Terraform", "DevSecOps"],
+    "github": "https://github.com/example/cloud-iam-auditor",
+    "metrics": {
+      "graphNodes": "50,000+ IAM nodes evaluated",
+      "misconfigurationsIdentified": "24 privilege escalation paths",
+      "complianceFrameworks": "CIS AWS Benchmark v1.4, SOC2"
+    },
+    "highlights": [
+      "Graph-based policy simulation detecting shadow administrator roles",
+      "CI/CD pipeline gatekeeper blocking risky Terraform plan merges",
+      "Automated remediation pull-request generation for overly permissive policies"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Ransomware Emulation & Canary File Defense Suite",
+    "description": "Defensive canary deployment tool with kernel filesystem watcher that traps rapid encryption anomalies and isolates endpoints.",
+    "category": "Endpoint Detection",
+    "tags": ["C++", "Python", "Windows API", "eBPF", "EDR", "Mitre ATT&CK"],
+    "github": "https://github.com/example/canary-ransomware-defense",
+    "metrics": {
+      "reactionTime": "< 250ms from trigger",
+      "dataPreservation": "99.9% of user files protected",
+      "signatureReliance": "Zero (Behavioral analysis)"
+    },
+    "highlights": [
+      "Deceptive decoy canary files strategically seeded across file system hierarchies",
+      "High-frequency file entropy calculations detecting active AES/ChaCha encryption",
+      "Instantaneous automated network card disabling and process kill sequence"
+    ]
+  }
+]

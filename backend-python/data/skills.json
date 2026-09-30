@@ -1,0 +1,24 @@
+{
+  "domains": [
+    {
+      "name": "Defensive Security & SOC Operations",
+      "proficiency": 95,
+      "skills": ["SIEM Architecture (Splunk, Elastic)", "Threat Hunting & Sigma Rules", "Incident Handling (NIST SP 800-61)", "Suricata & Snort IDS/IPS", "Zeek Network Analysis"]
+    },
+    {
+      "name": "Offensive Security & Penetration Testing",
+      "proficiency": 88,
+      "skills": ["Web Application Security (OWASP Top 10)", "Active Directory Exploitation & Kerberoasting", "Network Penetration Testing", "Burp Suite Pro", "Metasploit & BloodHound"]
+    },
+    {
+      "name": "Cloud Security & DevSecOps",
+      "proficiency": 90,
+      "skills": ["AWS & Azure Security Architecture", "Container Hardening (Docker, Kube-bench)", "CI/CD Security Scanning (SAST/DAST/SCA)", "Terraform & IaC Security", "Trivy & Snyk"]
+    },
+    {
+      "name": "Cryptography & Secure Architecture",
+      "proficiency": 85,
+      "skills": ["PKI & Mutual TLS (mTLS)", "Zero Trust Architecture (NIST SP 800-207)", "Post-Quantum Cryptography Basics", "SSH/GPG Key Management", "Secret Management (HashiCorp Vault)"]
+    }
+  ]
+}

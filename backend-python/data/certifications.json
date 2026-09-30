@@ -1,0 +1,38 @@
+[
+  {
+    "code": "OSCP",
+    "name": "Offensive Security Certified Professional",
+    "issuer": "OffSec",
+    "badgeUrl": "https://images.credly.com/size/340x340/images/55da1013-3392-491a-be33-874db1d904f6/image.png",
+    "verificationId": "OS-101-987654",
+    "status": "Active",
+    "issuedDate": "2023-04-15"
+  },
+  {
+    "code": "CISSP",
+    "name": "Certified Information Systems Security Professional",
+    "issuer": "(ISC)²",
+    "badgeUrl": "https://images.credly.com/size/340x340/images/e62e15dc-be04-406f-b258-c0b7847c5d9f/image.png",
+    "verificationId": "ISC2-ID-654321",
+    "status": "Active",
+    "issuedDate": "2022-11-20"
+  },
+  {
+    "code": "AWS-SCS",
+    "name": "AWS Certified Security - Specialty",
+    "issuer": "Amazon Web Services",
+    "badgeUrl": "https://images.credly.com/size/340x340/images/0a40237e-660c-4fae-b2d9-1d418705001a/image.png",
+    "verificationId": "AWS-SEC-847291",
+    "status": "Active",
+    "issuedDate": "2023-08-10"
+  },
+  {
+    "code": "CEH",
+    "name": "Certified Ethical Hacker (Master)",
+    "issuer": "EC-Council",
+    "badgeUrl": "https://images.credly.com/size/340x340/images/635a968a-cf8f-4d94-a957-c87a552fdb0b/image.png",
+    "verificationId": "ECC-CEH-391820",
+    "status": "Active",
+    "issuedDate": "2021-06-18"
+  }
+]

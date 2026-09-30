@@ -1,0 +1,9 @@
+[project]
+name = "cybersecurity-portfolio-backend"
+version = "1.0.0"
+description = "Hardened Cybersecurity Engineer Portfolio Python/Flask Backend"
+requires-python = ">=3.10"
+
+[tool.pyrefly]
+search-path = ["."]
+site-package-path = [".venv/Lib/site-packages"]

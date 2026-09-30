@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend-node:
+    build:
+      context: ./backend-node
+      dockerfile: Dockerfile
+    container_name: cyber_portfolio_node
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - NODE_ENV=production
+      - CLIENT_URL=http://localhost:3000,http://localhost:5000,http://localhost:5001,http://localhost:8080
+      - RATE_LIMIT_MAX=100
+      - CONTACT_LIMIT_MAX=10
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+
+  backend-python:
+    build:
+      context: ./backend-python
+      dockerfile: Dockerfile
+    container_name: cyber_portfolio_python
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    environment:
+      - PORT=5001
+      - FLASK_ENV=production
+      - CLIENT_URL=http://localhost:3000,http://localhost:5000,http://localhost:5001,http://localhost:8080
+      - RATE_LIMIT_STORAGE_URI=memory://
+    security_opt:
+      - no-new-privileges:true

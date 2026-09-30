@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cybersecurity Engineer Portfolio & Security Operations Center. High-performance defensive engineering, threat research, and hardened backend APIs.">
+  <meta name="keywords" content="Cybersecurity, Threat Hunting, SIEM, DevSecOps, Penetration Testing, Zero Trust, Node.js, Python Flask">
+  <meta name="author" content="Cybersecurity Engineer">
+  <title>Cybersecurity Engineer Portfolio | Security Operations Center</title>
+  
+  <!-- Modern Font: JetBrains Mono and Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Matrix Digital Rain Canvas -->
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top System Telemetry Bar -->
+  <aside class="system-bar" aria-label="System Security Telemetry">
+    <div class="system-bar-content">
+      <div class="telemetry-pill">
+        <span class="status-dot green pulse" id="telemetry-dot"></span>
+        <span class="telemetry-label">GATEWAY:</span>
+        <span class="telemetry-val" id="active-engine-label">Node.js Express (5000)</span>
+      </div>
+      <div class="telemetry-pill">
+        <span class="telemetry-label">SECURITY POSTURE:</span>
+        <span class="telemetry-val highlight">HARDENED-L4</span>
+      </div>
+      <div class="telemetry-pill desktop-only">
+        <span class="telemetry-label">RATE LIMITS:</span>
+        <span class="telemetry-val">10/15m Strict</span>
+      </div>
+      <div class="telemetry-pill desktop-only">
+        <span class="telemetry-label">OWASP COMPLIANCE:</span>
+        <span class="telemetry-val text-cyan">A01-A10 Verified</span>
+      </div>
+      
+      <!-- Live Backend Switcher -->
+      <div class="backend-switcher" id="backend-switcher-controls">
+        <label for="engine-select" class="switcher-label">TARGET BACKEND:</label>
+        <select id="engine-select" class="switcher-select">
+          <option value="http://localhost:5000" selected>Node.js / Express (:5000)</option>
+          <option value="http://localhost:5001">Python / Flask (:5001)</option>
+          <option value="custom">Custom URL...</option>
+        </select>
+        <button id="btn-ping-backend" class="btn-micro" title="Test Backend Connection">PING</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Primary Navigation -->
+  <nav class="cyber-nav" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-shield">🛡️</div>
+        <div class="brand-text">
+          <span class="brand-title">CYBER_DEFENSE</span>
+          <span class="brand-sub">SOC & DEVSECOPS PORTFOLIO</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#projects" class="nav-link">SECURITY TOOLS</a></li>
+        <li><a href="#skills" class="nav-link">CAPABILITIES</a></li>
+        <li><a href="#certifications" class="nav-link">CERTIFICATIONS</a></li>
+        <li><a href="#api-console" class="nav-link">API CONSOLE</a></li>
+        <li><a href="#contact" class="nav-link btn-contact-nav">INITIATE CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="hero">
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-icon">⚡</span>
+        <span>DEFENSIVE SECURITY ENGINEER & CLOUD ARCHITECT</span>
+      </div>
+      
+      <h1 class="hero-title">
+        Engineering Resilient Systems Against <span class="text-gradient">Adversarial Threats</span>
+      </h1>
+      
+      <p class="hero-description">
+        Specializing in zero-trust architectures, proactive SIEM threat intelligence pipelines, vulnerability detection algorithms, and hardened microservices backends.
+      </p>
+
+      <!-- Key Stats Grid -->
+      <div class="stats-grid" id="stats-container">
+        <div class="stat-card">
+          <div class="stat-num" id="stat-threats">1,420+</div>
+          <div class="stat-label">Threats Neutralized</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="stat-vulns">380+</div>
+          <div class="stat-label">Vulnerabilities Patched</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="stat-systems">120+</div>
+          <div class="stat-label">Systems Hardened</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num text-cyan" id="stat-uptime">99.99%</div>
+          <div class="stat-label">Defensive Uptime</div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <span>INSPECT SECURITY TOOLS</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <button id="btn-show-pgp" class="btn-secondary">
+          <span>EXPORT PGP KEY</span>
+          <span class="btn-icon">🔑</span>
+        </button>
+        <a href="#api-console" class="btn-outline">
+          <span>LIVE API INSPECTOR</span>
+          <span class="btn-icon">⚡</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Verified Certifications Section -->
+  <section class="cert-section" id="certifications">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">[ CREDENTIAL VERIFICATION ]</div>
+        <h2 class="section-title">Industry Certifications & Credentials</h2>
+        <p class="section-sub">Independently verified practical security qualifications</p>
+      </div>
+
+      <div class="cert-grid" id="certifications-grid">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <span>Querying /api/certifications...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects & Tools Section -->
+  <main class="projects-section" id="projects">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">[ THREAT RESEARCH & DEFENSIVE TOOLING ]</div>
+        <h2 class="section-title">Cybersecurity Projects & Threat Scanners</h2>
+        <p class="section-sub">Dynamic data stream powered by <code>GET /api/projects</code></p>
+      </div>
+
+      <!-- Tag Filters -->
+      <div class="filters-container">
+        <span class="filter-label">FILTER BY VECTOR:</span>
+        <div class="filter-chips" id="filter-chips">
+          <button class="filter-chip active" data-filter="all">ALL TOOLING</button>
+          <button class="filter-chip" data-filter="Python">PYTHON</button>
+          <button class="filter-chip" data-filter="ELK Stack">ELK / SIEM</button>
+          <button class="filter-chip" data-filter="Docker">DOCKER</button>
+          <button class="filter-chip" data-filter="Zero Trust">ZERO TRUST</button>
+          <button class="filter-chip" data-filter="CloudSecurity">CLOUD</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <span>Querying dynamic project catalog from backend...</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Technical Competencies & Skills -->
+  <section class="skills-section" id="skills">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">[ CAPABILITY MATRIX ]</div>
+        <h2 class="section-title">Security Domains & Technical Proficiencies</h2>
+        <p class="section-sub">Dynamic competencies retrieved from <code>GET /api/skills</code></p>
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <span>Loading security domains...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live API Inspector / Console -->
+  <section class="api-console-section" id="api-console">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">[ BACKEND TEST BENCH ]</div>
+        <h2 class="section-title">Interactive Live API Console</h2>
+        <p class="section-sub">Execute direct requests against the active backend server and observe security headers and payloads</p>
+      </div>
+
+      <div class="console-box">
+        <div class="console-header">
+          <div class="console-dots">
+            <span class="c-dot red"></span>
+            <span class="c-dot yellow"></span>
+            <span class="c-dot green"></span>
+          </div>
+          <div class="console-title">ENDPOINT TEST CONTROLLER (CURRENT: <span id="current-url-display">http://localhost:5000</span>)</div>
+          <div class="console-timing" id="console-latency">-- ms</div>
+        </div>
+
+        <div class="console-actions">
+          <button class="btn-api" data-endpoint="/api/health" data-method="GET">GET /api/health</button>
+          <button class="btn-api" data-endpoint="/api/projects" data-method="GET">GET /api/projects</button>
+          <button class="btn-api" data-endpoint="/api/certifications" data-method="GET">GET /api/certifications</button>
+          <button class="btn-api" data-endpoint="/api/skills" data-method="GET">GET /api/skills</button>
+          <button class="btn-api" data-endpoint="/api/stats" data-method="GET">GET /api/stats</button>
+          <button class="btn-api" data-endpoint="/api/pgp-key" data-method="GET">GET /api/pgp-key</button>
+        </div>
+
+        <div class="console-output-wrapper">
+          <div class="response-status-bar">
+            <span>HTTP STATUS: <strong id="console-status">200 OK</strong></span>
+            <span>HEADERS: <span id="console-headers-summary">Content-Type, X-Frame-Options, Helmet</span></span>
+          </div>
+          <pre class="console-output" id="console-output-text">// Click any endpoint button above to test live backend responses...</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secure Contact Form Section -->
+  <section class="contact-section" id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">[ SECURE DISPATCH ]</div>
+        <h2 class="section-title">Initiate Encrypted Contact</h2>
+        <p class="section-sub">Submissions are sanitized, rate-limited (10 req/15m), and processed via <code>POST /api/contact</code></p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Contact Form Box -->
+        <div class="contact-form-box">
+          <form id="contact-form" novalidate>
+            <!-- Anti-Bot Honeypot Field (Hidden from humans) -->
+            <input type="text" name="website_url" class="sr-hidden" tabindex="-1" autocomplete="off">
+
+            <div class="form-group">
+              <label for="name" class="form-label">
+                <span>IDENTITY / NAME</span>
+                <span class="required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                class="form-input" 
+                placeholder="e.g. Jane Doe" 
+                required 
+                minlength="2" 
+                maxlength="80" 
+                autocomplete="name"
+              >
+              <div class="input-hint">2-80 characters. Sanitized against XSS and control sequences.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">
+                <span>COMMUNICATION EMAIL</span>
+                <span class="required">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="form-input" 
+                placeholder="e.g. jane@organization.com" 
+                required 
+                maxlength="120"
+                autocomplete="email"
+              >
+              <div class="input-hint">RFC 5322 compliant regex verification. CRLF protected.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">
+                <span>SECURITY INQUIRY OR MISSION BRIEF</span>
+                <span class="required">*</span>
+              </label>
+              <textarea 
+                id="message" 
+                name="message" 
+                class="form-textarea" 
+                rows="5" 
+                placeholder="Provide details regarding security audits, red-teaming, architecture reviews, or confidential consultations..." 
+                required 
+                minlength="10" 
+                maxlength="3000"
+              ></textarea>
+              <div class="textarea-footer">
+                <span class="input-hint">Minimum 10 characters. Maximum 3,000 characters.</span>
+                <span class="char-count" id="char-count">0 / 3000</span>
+              </div>
+            </div>
+
+            <button type="submit" id="btn-submit-contact" class="btn-submit">
+              <span class="submit-spinner" id="submit-spinner"></span>
+              <span class="submit-text" id="submit-btn-text">DISPATCH MESSAGE VIA SECURE API</span>
+              <span class="submit-icon">🔒</span>
+            </button>
+
+            <!-- Feedback Notice Box -->
+            <div id="contact-feedback" class="feedback-box hidden" role="alert"></div>
+          </form>
+        </div>
+
+        <!-- Security Guarantee Aside -->
+        <div class="security-aside">
+          <div class="aside-card">
+            <h3 class="aside-title">🛡️ Security & Zero-Trust Guarantees</h3>
+            <ul class="aside-list">
+              <li>
+                <strong>Strict Rate Limiting:</strong>
+                Submissions are strictly capped to 10 submissions per IP per 15-minute window to neutralize DDoS & mail relay abuse.
+              </li>
+              <li>
+                <strong>Input Sanitization:</strong>
+                All parameters are HTML-escaped, control characters stripped, and verified against SQLi/NoSQLi/CRLF patterns.
+              </li>
+              <li>
+                <strong>Encrypted Channels:</strong>
+                Transmissions are safeguarded by TLS 1.3 with HSTS preloading and Strict CSP headers.
+              </li>
+              <li>
+                <strong>Zero Credential Leakage:</strong>
+                Sensitive tokens are securely isolated in environment files (.env) with non-privileged process execution.
+              </li>
+            </ul>
+
+            <div class="pgp-fingerprint-box">
+              <div class="fp-title">PGP FINGERPRINT</div>
+              <code class="fp-code">E9A4 57B2 9C01 88EF 41B3 27C6 9D8A 3F10 4A8B 9C2D</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PGP Key Modal -->
+  <div id="pgp-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="pgp-modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="pgp-modal-title" class="modal-title">🔑 Public PGP Armor Key</h3>
+        <button id="btn-close-pgp" class="btn-close" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-sub">Use this public key to encrypt sensitive files, threat reports, or communications prior to dispatch.</p>
+        <pre class="pgp-box" id="pgp-key-text">Querying /api/pgp-key...</pre>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-copy-pgp" class="btn-secondary">COPY KEY BLOCK</button>
+        <button id="btn-download-pgp" class="btn-primary">DOWNLOAD .ASC FILE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="cyber-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">CYBERSECURITY PORTFOLIO INFRASTRUCTURE</div>
+        <p class="footer-desc">Designed with multi-runtime resilience (Node.js Express & Python Flask).</p>
+      </div>
+      <div class="footer-right">
+        <div class="security-seal">
+          <span class="seal-icon">🔒</span>
+          <span>OWASP & NIST SP 800-53 ALIGNED</span>
+        </div>
+        <div class="footer-copy">Educational & Defensive Security Portfolio Framework.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
